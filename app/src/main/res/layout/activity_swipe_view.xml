@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.miaozi.baselibrary.views.SwipeView2
+        android:id="@+id/sp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:background="#F44336"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/bt_1"
+                android:background="#FF0505"
+                android:textColor="#fff"
+                android:text="删除"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/bt_2"
+                android:background="#FF5722"
+                android:textColor="#fff"
+                android:text="置顶"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#FF5722"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/bt_3"
+                android:background="#009688"
+                android:textColor="#fff"
+                android:text="设置"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/bt_4"
+                android:background="#673AB7"
+                android:textColor="#fff"
+                android:text="标记"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll"
+            android:gravity="center"
+            android:background="#FFEB3B"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv"
+                android:text="我是内容面"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.miaozi.baselibrary.views.SwipeView2>
+    <com.miaozi.baselibrary.views.EasySwipeMenuLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:contentView="@+id/content"
+        app:leftMenuView="@+id/left"
+        app:rightMenuView="@+id/right">
+        <LinearLayout
+            android:id="@+id/left"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:orientation="horizontal"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/tv_fx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#3F51B5"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/tv_cc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="内容区域" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_light"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_bright"
+                android:padding="20dp"
+                android:text="删除" />
+            <TextView
+                android:id="@+id/right_menu_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_dark"
+                android:padding="20dp"
+                android:text="收藏" />
+        </LinearLayout>
+    </com.miaozi.baselibrary.views.EasySwipeMenuLayout>
+    <com.miaozi.miaozi.MyView
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+</LinearLayout>
