@@ -5,14 +5,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.miaozi.baselibrary.bottomTab.BottomItem;
 import com.miaozi.baselibrary.bottomTab.BottomTabView;
+import com.miaozi.baselibrary.utils.ScreenUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ListView mLv = findViewById(R.id.lv);
         mData = new String[]{"banner","swipeView","tabLayout"};
         mAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mData);

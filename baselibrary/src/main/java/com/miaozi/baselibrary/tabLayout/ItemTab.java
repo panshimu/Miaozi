@@ -7,49 +7,27 @@ import android.widget.TextView;
  * on 2019/9/16
  */
 public class ItemTab {
-    private int selectedColor;
-    private int unSelectedColor;
-    private int textSize;
-    private String text;
-    private boolean isSelected;
+    private TextView tv;
+    private int centerX;
 
-    public boolean isSelected() {
-        return isSelected;
+    public ItemTab(TextView tv, int centerX) {
+        this.tv = tv;
+        this.centerX = centerX;
     }
 
-    public void setSelected(boolean selected) {
-        isSelected = selected;
+    public TextView getTv() {
+        return tv;
     }
 
-    public int getSelectedColor() {
-        return selectedColor;
+    public void setTv(TextView tv) {
+        this.tv = tv;
     }
 
-    public void setSelectedColor(int selectedColor) {
-        this.selectedColor = selectedColor;
+    public int getCenterX() {
+        return centerX;
     }
 
-    public int getUnSelectedColor() {
-        return unSelectedColor;
-    }
-
-    public void setUnSelectedColor(int unSelectedColor) {
-        this.unSelectedColor = unSelectedColor;
-    }
-
-    public int getTextSize() {
-        return textSize;
-    }
-
-    public void setTextSize(int textSize) {
-        this.textSize = textSize;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
+    public void setCenterX(int centerX) {
+        this.centerX = centerX;
     }
 }

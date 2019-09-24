@@ -11,7 +11,6 @@ import java.util.List;
  * on 2019/9/17
  */
 public class TabContentAdapter extends FragmentPagerAdapter {
-    private FragmentManager mFragmentManager;
     private List<Fragment> mFragmentList;
 
     public TabContentAdapter(FragmentManager fm,List<Fragment> mFragmentList) {

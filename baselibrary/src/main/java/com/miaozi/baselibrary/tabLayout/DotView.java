@@ -6,8 +6,14 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+
 import androidx.annotation.Nullable;
+
+import com.miaozi.baselibrary.utils.ScreenUtils;
 
 /**
  * created by panshimu
@@ -33,10 +39,18 @@ public class DotView extends View {
         mRadius = 2;
     }
 
+    public void setLeftMargin(int left){
+        LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) getLayoutParams();
+        layoutParams.leftMargin = left;
+        setLayoutParams(layoutParams);
+    }
+    public int getMarginLeft(){
+        return ((LinearLayout.LayoutParams) getLayoutParams()).leftMargin;
+    }
     @Override
     protected void onDraw(Canvas canvas) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            canvas.drawRoundRect(0,0,getMeasuredWidth(),getMeasuredHeight(),mRadius,mRadius,mPaint);
+            canvas.drawRoundRect(0 ,0,getMeasuredWidth(),getMeasuredHeight(),mRadius,mRadius,mPaint);
         }
     }
 }
