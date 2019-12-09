@@ -20,7 +20,11 @@
         </activity>
         <activity android:name=".BannerActivity"/>
         <activity android:name=".SwipeViewActivity"/>
+        <activity android:name=".SwipeViewActivity1"/>
+        <activity android:name=".SwipeViewActivity2"/>
         <activity android:name=".SwipeTabLayoutActivity"/>
+        <activity android:name=".NavigationBarActivity"/>
+        <activity android:name=".SelectedLayoutActivity"/>
     </application>
 
 </manifest>

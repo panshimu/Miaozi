@@ -33,8 +33,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        int a = 1;
+        int b = 3;
+        Log.e("TAG","ss = " + 1/3);
+        Log.e("TAG","ss = " + 1%3);
+
         ListView mLv = findViewById(R.id.lv);
-        mData = new String[]{"banner","swipeView","tabLayout"};
+        mData = new String[]{"banner","swipeView","tabLayout","navigationBar","selectedLayout"};
         mAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mData);
         mLv.setAdapter(mAdapter);
         mLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -46,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this,SwipeViewActivity.class));
                 }else if(position == 2){
                     startActivity(new Intent(MainActivity.this, SwipeTabLayoutActivity.class));
+                }else if(position == 3){
+                    startActivity(new Intent(MainActivity.this, NavigationBarActivity.class));
+                }else if(position == 4){
+                    startActivity(new Intent(MainActivity.this, SelectedLayoutActivity.class));
                 }
             }
         });

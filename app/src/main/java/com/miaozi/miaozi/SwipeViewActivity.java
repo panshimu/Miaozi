@@ -1,15 +1,15 @@
 package com.miaozi.miaozi;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
+import android.view.LayoutInflater;
 import android.view.View;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.miaozi.baselibrary.views.SwipeView;
-import com.miaozi.baselibrary.views.SwipeView2;
 
 /**
  * created by panshimu
@@ -19,65 +19,25 @@ public class SwipeViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_swipe_view);
-        SwipeView2 swipeView = findViewById(R.id.sp);
-        swipeView.setContentViewOnclickListener(new SwipeView2.ContentViewOnclickListener() {
+        ObjectAnimator animator = new ObjectAnimator();
+        animator.addListener(new AnimatorListenerAdapter() {
             @Override
-            public void contentViewOnclick() {
-                Log.d("TAG","9090");
+            public void onAnimationCancel(Animator animation) {
+                super.onAnimationCancel(animation);
             }
         });
+        setContentView(R.layout.activity_swipe_view);
         findViewById(R.id.bt_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("TAG","bt_1");
+                startActivity(new Intent(SwipeViewActivity.this,SwipeViewActivity1.class));
             }
         });
         findViewById(R.id.bt_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("TAG","bt_2");
+                startActivity(new Intent(SwipeViewActivity.this,SwipeViewActivity2.class));
             }
         });
-        findViewById(R.id.bt_3).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("TAG","bt_3");
-            }
-        });
-        findViewById(R.id.bt_4).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("TAG","bt_4");
-            }
-        });
-
-        findViewById(R.id.tv).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("TAG","tv");
-            }
-        });
-
-
-        findViewById(R.id.content).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("TAG","content");
-            }
-        });
-        findViewById(R.id.tv_fx).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("TAG","tv_fx");
-            }
-        });
-        findViewById(R.id.tv_cc).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("TAG","tv_cc");
-            }
-        });
-
     }
 }

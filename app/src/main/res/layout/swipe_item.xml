@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.miaozi.baselibrary.views.SwipeLayout2
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/bt_7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#F44336"
+                android:text="删除"
+                android:textColor="#fff" />
+            <Button
+                android:id="@+id/bt_8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#E91E63"
+                android:text="删除"
+                android:textColor="#fff" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/bt_10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#9C27B0"
+                android:text="删除"
+                android:textColor="#fff" />
+            <Button
+                android:id="@+id/bt_11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#673AB7"
+                android:text="删除"
+                android:textColor="#fff" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bt_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#009688"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/bt_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是内容页"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </com.miaozi.baselibrary.views.SwipeLayout2>
+    <View
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</LinearLayout>

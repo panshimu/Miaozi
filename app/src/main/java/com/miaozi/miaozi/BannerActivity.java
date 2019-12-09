@@ -69,7 +69,6 @@ public class BannerActivity extends AppCompatActivity {
 
         BannerView bannerView2 = findViewById(R.id.banner2);
 
-
         bannerView2.setDotResId(R.mipmap.gg,R.mipmap.hh);
         bannerView2.setDisplayTime(3000);
         bannerView2.setDotBottomMargin(10);
