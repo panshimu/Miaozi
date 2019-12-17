@@ -25,6 +25,7 @@
         <activity android:name=".SwipeTabLayoutActivity"/>
         <activity android:name=".NavigationBarActivity"/>
         <activity android:name=".SelectedLayoutActivity"/>
+        <activity android:name=".PhotoViewActivity"/>
     </application>
 
 </manifest>

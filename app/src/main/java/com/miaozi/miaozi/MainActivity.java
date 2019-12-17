@@ -39,7 +39,13 @@ public class MainActivity extends AppCompatActivity {
         Log.e("TAG","ss = " + 1%3);
 
         ListView mLv = findViewById(R.id.lv);
-        mData = new String[]{"banner","swipeView","tabLayout","navigationBar","selectedLayout"};
+        mData = new String[]{"banner",
+                "swipeView",
+                "tabLayout",
+                "navigationBar",
+                "selectedLayout",
+                "PhotoView"
+        };
         mAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mData);
         mLv.setAdapter(mAdapter);
         mLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -55,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, NavigationBarActivity.class));
                 }else if(position == 4){
                     startActivity(new Intent(MainActivity.this, SelectedLayoutActivity.class));
+                }else if(position == 5){
+                    startActivity(new Intent(MainActivity.this, PhotoViewActivity.class));
                 }
             }
         });
